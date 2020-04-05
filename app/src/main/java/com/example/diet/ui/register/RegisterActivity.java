@@ -15,7 +15,7 @@ public class RegisterActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
         username = findViewById(R.id.register_username);
         password = findViewById(R.id.register_password);
         passwordConfirmation = findViewById(R.id.register_password_confirmation);
