@@ -1,4 +1,4 @@
-package com.example.diet.ui.home;
+package com.example.diet.ui.mypage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,17 +10,19 @@ import androidx.fragment.app.Fragment;
 
 import com.example.diet.R;
 
-public class HomeFragment extends Fragment {
+public class CalendarFragment extends Fragment {
     View view;
-    public static HomeFragment newInstance() {
-        HomeFragment fragment = new HomeFragment();
+    public static CalendarFragment newInstance() {
+        CalendarFragment fragment = new CalendarFragment();
         return fragment;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_calendar, container, false);
+        TextView title = (TextView)view.findViewById(R.id.titlebarText);
+        title.setText("Calendar");
         return view;
     }
 }

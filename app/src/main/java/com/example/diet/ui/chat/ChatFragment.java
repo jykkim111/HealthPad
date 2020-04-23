@@ -1,4 +1,4 @@
-package com.example.diet.ui.mypage;
+package com.example.diet.ui.chat;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,19 +10,18 @@ import androidx.fragment.app.Fragment;
 
 import com.example.diet.R;
 
-public class MypageFragment extends Fragment {
+public class ChatFragment extends Fragment {
     View view;
-    public static MypageFragment newInstance() {
-        MypageFragment fragment = new MypageFragment();
+    public static ChatFragment newInstance() {
+        ChatFragment fragment = new ChatFragment();
         return fragment;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_mypage, container, false);
-        TextView title = (TextView)view.findViewById(R.id.titlebarText);
-        title.setText("Mypage");
+        view = inflater.inflate(R.layout.fragment_chat, container, false);
+
         return view;
     }
 }
