@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_main_home"
+        android:id="@+id/menu_main_Home"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Home"/>
+        android:title="My Day"/>
 
     <item
-        android:id="@+id/menu_main_analyze"
+        android:id="@+id/menu_main_My_Log"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Analyze"/>
+        android:title="Log"/>
 
     <item
-        android:id="@+id/menu_main_calendar"
+        android:id="@+id/menu_main_To_dos"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Calendar"/>
+        android:title="To dos"/>
 
     <item
         android:id="@+id/menu_main_chat"
