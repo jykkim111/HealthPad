@@ -31,15 +31,11 @@ public class Retrofits {
     public static <S> S createService(
             Class<S> serviceClass, final String authToken) {
         if (!TextUtils.isEmpty(authToken)) {
-            AuthenticationInterceptor interceptor =
-                    new AuthenticationInterceptor(authToken);
-
-            if (!httpClient.interceptors().contains(interceptor)) {
-                httpClient.addInterceptor(interceptor);
-
-                builder.client(httpClient.build());
-                retrofit = builder.build();
-            }
+            AuthenticationInterceptor interceptor = new AuthenticationInterceptor(authToken);
+            httpClient.interceptors().clear();
+            httpClient.addInterceptor(interceptor);
+            builder.client(httpClient.build());
+            retrofit = builder.build();
         }
 
         return retrofit.create(serviceClass);
