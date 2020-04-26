@@ -4,13 +4,21 @@
         android:id="@+id/menu_main_home"
         android:icon="@drawable/ic_launcher_background"
         android:title="Home"/>
+
     <item
         android:id="@+id/menu_main_analyze"
         android:icon="@drawable/ic_launcher_background"
         android:title="Analyze"/>
+
     <item
-        android:id="@+id/menu_main_mypage"
+        android:id="@+id/menu_main_calendar"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Mypage"/>
+        android:title="Calendar"/>
+
+    <item
+        android:id="@+id/menu_main_chat"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Chat"/>
+
 
 </menu>
