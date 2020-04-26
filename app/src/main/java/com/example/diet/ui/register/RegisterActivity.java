@@ -1,10 +1,12 @@
 package com.example.diet.ui.register;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.diet.BaseActivity;
 import com.example.diet.R;
@@ -38,7 +40,12 @@ public class RegisterActivity extends BaseActivity {
         if(validateInputs()){
 
         }else{
-            // display err message
+            Context context = getApplicationContext();
+            CharSequence text = "Passwords do not match.";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         }
     }
 }
