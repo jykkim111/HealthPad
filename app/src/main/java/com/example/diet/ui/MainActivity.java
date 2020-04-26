@@ -45,6 +45,7 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
     int dayOfMonth;
     Calendar myCalendar;
     private TextView toolbarTitle;
+    private ProfilePage profilePage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
