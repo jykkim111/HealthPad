@@ -16,6 +16,7 @@ public class ProfilePage extends BaseActivity {
         setContentView(R.layout.fragment_profile);
         final Context context = this;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
 }
