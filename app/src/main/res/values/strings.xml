@@ -22,4 +22,24 @@
     <string name="dinner_calorie_available">230</string>
     <string name="dinner_calorie_total">320</string>
 
+
+    <string-array name= "foods">
+        <item>eggs</item>
+        <item>bacon</item>
+        <item>milk</item>
+        <item>hamburger</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+    </string-array>
+
 </resources>

@@ -48,6 +48,8 @@
         <activity
             android:name=".ui.profile.ProfilePage"
             android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.analyze.LogActivity"
+            android:parentActivityName=".ui.MainActivity"/>
     </application>
 
 </manifest>
