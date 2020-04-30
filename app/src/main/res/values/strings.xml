@@ -11,4 +11,15 @@
     <string name="calories_progress_f">50</string>
     <string name="calories_progress_sat">60</string>
     <string name="calories_progress_sun">60</string>
+    <string name="title_activity_social_fragment">SocialFragment</string>
+    <string name="tab_text_1">Calories</string>
+    <string name="tab_text_2">Nutrients</string>
+    <string name="title_activity_home_fragment">HomeFragment</string>
+    <string name="breakfast_calorie_available">230</string>
+    <string name="breakfast_calorie_total">320</string>
+    <string name="lunch_calorie_available">230</string>
+    <string name="lunch_calorie_total">320</string>
+    <string name="dinner_calorie_available">230</string>
+    <string name="dinner_calorie_total">320</string>
+
 </resources>

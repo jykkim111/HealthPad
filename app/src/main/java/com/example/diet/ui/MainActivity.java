@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,25 +12,27 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.diet.BaseActivity;
 import com.example.diet.R;
+import com.example.diet.ui.Social.SocialFragment;
 import com.example.diet.ui.analyze.CameraActivity;
+import com.example.diet.ui.analyze.LogFragment;
 import com.example.diet.ui.chat.ChatFragment;
+import com.example.diet.ui.home.CaloriesFragment;
 import com.example.diet.ui.home.HomeFragment;
-import com.example.diet.ui.calendar.CalendarFragment;
+import com.example.diet.ui.home.NutritionFragment;
+import com.example.diet.ui.home.ui.main.SectionsPagerAdapter;
 import com.example.diet.ui.profile.ProfilePage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -45,7 +46,7 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
     int dayOfMonth;
     Calendar myCalendar;
     private TextView toolbarTitle;
-    private ProfilePage profilePage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +58,9 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
         Toolbar toolbar = (Toolbar)findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        //set date on toolbar
 
+
+        //set date on toolbar
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         toolbarTitle.setText(date);
@@ -86,10 +88,10 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
                         selectedFragment = HomeFragment.newInstance();
                         break;
                     case R.id.menu_main_My_Log:
-                        startActivity(new Intent(context, CameraActivity.class));
-                        return false;
+                        selectedFragment = LogFragment.newInstance();
+                        break;
                     case R.id.menu_main_To_dos:
-                        selectedFragment = CalendarFragment.newInstance();
+                        selectedFragment = SocialFragment.newInstance();
                         break;
                     case R.id.menu_main_chat:
                         selectedFragment = ChatFragment.newInstance();
@@ -102,8 +104,13 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
             }
         });
 
+
+
         // Home menu clicked when app is first opened
         bottomNavigationView.setSelectedItemId(R.id.menu_main_Home);
+
+
+
     }
 
     @Override
