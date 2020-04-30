@@ -9,15 +9,20 @@ import androidx.fragment.app.Fragment;
 
 import com.example.diet.R;
 
-public class AnalyzeFragment extends Fragment {
-    public static AnalyzeFragment newInstance() {
-        AnalyzeFragment fragment = new AnalyzeFragment();
+public class LogFragment extends Fragment {
+
+    private View view;
+
+    public static LogFragment newInstance() {
+        LogFragment fragment = new LogFragment();
         return fragment;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_analyze, container, false);
+        view =  inflater.inflate(R.layout.fragment_log, container, false);
+
+        return view;
     }
 }

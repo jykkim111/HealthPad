@@ -2,4 +2,24 @@
     <string name="app_name">HealthPad</string>
     <string name="action_settings">Settings</string>
     <string name="home_second">Home Second</string>
+    <string name="calories_under">1,860</string>
+    <string name="calories_progress">80</string>
+    <string name="calories_progress_m">20</string>
+    <string name="calories_progress_tu">20</string>
+    <string name="calories_progress_w">30</string>
+    <string name="calories_progress_th">40</string>
+    <string name="calories_progress_f">50</string>
+    <string name="calories_progress_sat">60</string>
+    <string name="calories_progress_sun">60</string>
+    <string name="title_activity_social_fragment">SocialFragment</string>
+    <string name="tab_text_1">Calories</string>
+    <string name="tab_text_2">Nutrients</string>
+    <string name="title_activity_home_fragment">HomeFragment</string>
+    <string name="breakfast_calorie_available">230</string>
+    <string name="breakfast_calorie_total">320</string>
+    <string name="lunch_calorie_available">230</string>
+    <string name="lunch_calorie_total">320</string>
+    <string name="dinner_calorie_available">230</string>
+    <string name="dinner_calorie_total">320</string>
+
 </resources>
