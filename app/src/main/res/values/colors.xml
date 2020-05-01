@@ -10,7 +10,6 @@
     <color name="grey">#E5E5E5</color>
     <color name="green">#257d41</color>
     <color name="blue">#3fcee0</color>
-
-
+    <color name="fui_transparent"></color>
 </resources>
 

@@ -8,12 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-       <com.github.mikephil.charting.charts.PieChart
-           android:id="@+id/nutrition_pie"
-           android:layout_width="300dp"
-           android:layout_height="300dp"
-           android:layout_centerHorizontal="true"
-           />
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/nutrition_pie"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_centerHorizontal="true"
+            />
 
 
     </RelativeLayout>
@@ -35,101 +35,94 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Weekly Nutrition"
+                android:text="Weekly Nutrients"
                 android:textSize="20dp"
                 android:textAlignment="center"
                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="14dp"/>
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textView25"
+                    android:text="M"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="47dp"/>
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textView19"
+                    android:text="Tu"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="41dp"/>
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textView20"
+                    android:text="W"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="41dp"/>
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Th"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@id/textView21"
+                    android:layout_marginLeft="41dp"/>
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="F"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@id/textView22"
+                    android:layout_marginLeft="43dp"/>
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="48dp"/>
+
+            </LinearLayout>
+
 
             <RelativeLayout
                 android:id="@+id/nut_charts_mixed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="20dp">
+                android:layout_alignParentLeft="true">
 
-                <ProgressBar
-                    android:id="@+id/calorie_chart_m"
-                    android:layout_width="40dp"
-                    android:layout_height="120dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="8dp"
-                    style="?android:progressBarStyleHorizontal"
-                    android:progressDrawable="@drawable/vertical"
-                    android:progress="@string/calories_progress_m"/>
 
-                <ProgressBar
-                    android:id="@+id/calorie_chart_tu"
-                    android:layout_width="40dp"
-                    android:layout_height="120dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginHorizontal="8dp"
-                    style="?android:progressBarStyleHorizontal"
-                    android:progressDrawable="@drawable/vertical"
-                    android:progress="@string/calories_progress_tu"
-                    android:layout_toRightOf="@id/calorie_chart_m" />
-
-                <ProgressBar
-                    android:id="@+id/calorie_chart_w"
-                    android:layout_width="40dp"
-                    android:layout_height="120dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginHorizontal="8dp"
-                    style="?android:progressBarStyleHorizontal"
-                    android:progressDrawable="@drawable/vertical"
-                    android:progress="@string/calories_progress_w"
-                    android:layout_toRightOf="@id/calorie_chart_tu"/>
-
-                <ProgressBar
-                    android:id="@+id/calorie_chart_th"
-                    android:layout_width="40dp"
-                    android:layout_height="120dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginHorizontal="8dp"
-                    style="?android:progressBarStyleHorizontal"
-                    android:progressDrawable="@drawable/vertical"
-                    android:progress="@string/calories_progress_th"
-                    android:layout_toRightOf="@id/calorie_chart_w"/>
-
-                <ProgressBar
-                    android:id="@+id/calorie_chart_f"
-                    android:layout_width="40dp"
-                    android:layout_height="120dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginHorizontal="8dp"
-                    style="?android:progressBarStyleHorizontal"
-                    android:progressDrawable="@drawable/vertical"
-                    android:progress="@string/calories_progress_f"
-                    android:layout_toRightOf="@id/calorie_chart_th"/>
-
-                <ProgressBar
-                    android:id="@+id/calorie_chart_sat"
-                    android:layout_width="40dp"
-                    android:layout_height="120dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginHorizontal="8dp"
-                    style="?android:progressBarStyleHorizontal"
-                    android:progressDrawable="@drawable/vertical"
-                    android:progress="@string/calories_progress_sat"
-                    android:layout_toRightOf="@id/calorie_chart_f"/>
-
-                <ProgressBar
-                    android:id="@+id/calorie_chart_sun"
-                    android:layout_width="40dp"
-                    android:layout_height="120dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginHorizontal="8dp"
-                    style="?android:progressBarStyleHorizontal"
-                    android:progressDrawable="@drawable/vertical"
-                    android:progress="@string/calories_progress_sun"
-                    android:layout_toRightOf="@id/calorie_chart_sat"/>
-
-                <RelativeLayout
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/nutrient_week_chart"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                </RelativeLayout>
+                    android:layout_height="150dp"/>
 
 
 
@@ -139,16 +132,7 @@
 
 
 
-
-
-
-
-
-
     </RelativeLayout>
-
-
-
 
 
 

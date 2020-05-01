@@ -15,7 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class EditProfile extends BaseActivity{
 
         FloatingActionButton save;
-        EditText name, location, email, age, height, weight;
+        EditText name, location, email, age, height, weight, gender;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class EditProfile extends BaseActivity{
             height = findViewById(R.id.profile_height);
             weight = findViewById(R.id.profile_weight);
             save = findViewById(R.id.profile_edit_btn);
+            gender = findViewById(R.id.profile_gender);
             save.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -50,6 +51,7 @@ public class EditProfile extends BaseActivity{
         editor.putString("age", age.getText().toString());
         editor.putString("height", height.getText().toString());
         editor.putString("weight", weight.getText().toString());
+        editor.putString("gender", gender.getText().toString());
 
         editor.apply();
         startActivity(new Intent(EditProfile.this, ProfilePage.class));

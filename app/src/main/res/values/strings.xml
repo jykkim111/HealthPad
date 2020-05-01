@@ -7,6 +7,7 @@
     <string name="age">25</string>
     <string name="height">175cm</string>
     <string name="weight">83kg</string>
+    <string name="gender">male</string>
     <string name="home_second">Home Second</string>
     <string name="calories_under">1,860</string>
     <string name="calories_progress">80</string>
