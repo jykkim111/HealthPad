@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<RelativeLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,42 +35,42 @@
 
         </RelativeLayout>
 
-        <TextView
+        <EditText
             android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/profile_img"
-            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
             android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-light"
-            android:text="@string/full_name"
+            android:hint="@string/full_name"
             android:textColor="@color/white"
             android:textSize="32dp" />
 
-        <TextView
+        <EditText
             android:id="@+id/profile_loc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/profile_name"
-            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
-            android:text="Cleveland, Ohio"
-            android:textSize="20dp"
-            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="sans-serif-light"
-            android:layout_marginBottom="10dp"/>
+            android:hint="@string/location"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/profile_edit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@android:drawable/ic_menu_edit"
-            android:layout_toRightOf="@id/profile_loc"
             android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/profile_loc"
+            android:clickable="true"
+            android:tint="@color/grey"
             app:backgroundTint="@color/white"
-            android:tint="@color/black"
-            android:layout_marginTop="10dp"/>
+            app:srcCompat="@android:drawable/checkbox_on_background" />
 
     </RelativeLayout>
 
@@ -97,13 +102,13 @@
                     android:fontFamily="sans-serif-light"
                     android:textColor="@color/black"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/profile_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:fontFamily="sans-serif-light"
-                    android:text="@string/email"
+                    android:hint="@string/email"
                     android:textColor="@color/black"
                     android:textSize="18dp" />
                 <View
@@ -132,7 +137,7 @@
                     android:fontFamily="sans-serif-light"
                     android:textColor="@color/black"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/profile_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -167,7 +172,7 @@
                     android:fontFamily="sans-serif-light"
                     android:textColor="@color/black"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/profile_height"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -202,7 +207,7 @@
                     android:fontFamily="sans-serif-light"
                     android:textColor="@color/black"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/profile_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -229,3 +234,4 @@
     </RelativeLayout>
 
 </RelativeLayout>
+</ScrollView>
