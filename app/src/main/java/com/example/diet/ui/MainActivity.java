@@ -21,7 +21,7 @@ import com.example.diet.BaseActivity;
 import com.example.diet.R;
 import com.example.diet.ui.Social.SocialFragment;
 import com.example.diet.ui.analyze.LogFragment;
-import com.example.diet.ui.exercise.ChatFragment;
+import com.example.diet.ui.exercise.ExerciseFragment;
 import com.example.diet.ui.home.HomeFragment;
 import com.example.diet.ui.profile.ProfilePage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
                         selectedFragment = LogFragment.newInstance();
                         break;
                     case R.id.menu_main_To_dos:
-                        selectedFragment = ChatFragment.newInstance();
+                        selectedFragment = ExerciseFragment.newInstance();
                         break;
                     case R.id.menu_main_chat:
                         selectedFragment = SocialFragment.newInstance();

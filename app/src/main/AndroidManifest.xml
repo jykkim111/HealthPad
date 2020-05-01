@@ -55,6 +55,10 @@
             android:parentActivityName=".ui.MainActivity"/>
         <activity android:name=".ui.analyze.ItemDetails"
             android:parentActivityName=".ui.analyze.LogActivity"/>
+        <activity android:name=".ui.exercise.ActivityList"
+            android:parentActivityName=".ui.MainActivity"/>
+        <activity android:name=".ui.exercise.ActivityDetails"
+            android:parentActivityName=".ui.exercise.ActivityList"/>
     </application>
 
 </manifest>
