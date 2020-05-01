@@ -48,6 +48,9 @@
         <activity
             android:name=".ui.profile.ProfilePage"
             android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.profile.EditProfile"
+            android:parentActivityName=".ui.MainActivity" />
     </application>
 
 </manifest>
