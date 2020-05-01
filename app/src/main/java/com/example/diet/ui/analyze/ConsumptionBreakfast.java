@@ -1,7 +1,6 @@
 package com.example.diet.ui.analyze;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,20 +11,22 @@ import com.example.diet.R;
 
 import java.util.ArrayList;
 
-public class ConsumptionList extends BaseActivity {
+public class ConsumptionBreakfast extends BaseActivity {
+
 
     RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_additems);
+        setContentView(R.layout.fragment_consumption_list);
         final Context context = this;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Food you ate today");
+        getSupportActionBar().setTitle("Consumed for breakfast");
 
         final ArrayList<Item> list = new ArrayList<>();
         list.add(new Item(R.drawable.egg, "egg", "105 calories"));
+        list.add(new Item(R.drawable.milk_icon, "milk", "250 calories"));
 
 
         recyclerView = findViewById(R.id.recycler_view);

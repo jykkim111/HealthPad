@@ -59,6 +59,12 @@
             android:parentActivityName=".ui.MainActivity"/>
         <activity android:name=".ui.exercise.ActivityDetails"
             android:parentActivityName=".ui.exercise.ActivityList"/>
+        <activity android:name=".ui.analyze.ConsumptionBreakfast"
+            android:parentActivityName=".ui.MainActivity"/>
+        <activity android:name=".ui.analyze.ConsumptionLunch"
+            android:parentActivityName=".ui.MainActivity"/>
+        <activity android:name=".ui.analyze.ConsumptionDinner"
+            android:parentActivityName=".ui.MainActivity"/>
     </application>
 
 </manifest>

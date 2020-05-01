@@ -85,19 +85,33 @@ public class LogFragment extends Fragment {
             });
         }
 
-        for(CardView cards : logCards){
-
-            cards.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                }
-            });
-
-        }
 
 
 
+        breakfastCard.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getContext(), ConsumptionBreakfast.class);
+                        startActivity(intent);
+                    }
+                });
+
+        lunchCard.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getContext(), ConsumptionLunch.class);
+                        startActivity(intent);
+                    }
+                });
+
+
+        dinnerCard.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getContext(), ConsumptionDinner.class);
+                        startActivity(intent);
+                 }
+                });
 
 
 
@@ -113,8 +127,5 @@ public class LogFragment extends Fragment {
         startActivity(intent);
     }
 
-    public void openConsumptionList(){
-        Intent intent = new Intent(this.getContext(), ConsumptionList.class);
-        startActivity(intent);
-    }
+
 }
