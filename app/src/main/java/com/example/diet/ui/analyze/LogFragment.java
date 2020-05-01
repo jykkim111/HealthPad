@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.diet.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class LogFragment extends Fragment {
@@ -24,6 +26,9 @@ public class LogFragment extends Fragment {
     private ImageButton addBreakfast;
     private ImageButton addLunch;
     private ImageButton addDinner;
+    private CardView breakfastCard;
+    private CardView lunchCard;
+    private CardView dinnerCard;
 
     public static LogFragment newInstance() {
         LogFragment fragment = new LogFragment();
@@ -51,6 +56,15 @@ public class LogFragment extends Fragment {
         addButtons.add(addLunch);
         addButtons.add(addDinner);
 
+        ArrayList<CardView> logCards = new ArrayList<CardView>();
+        breakfastCard = (CardView) view.findViewById(R.id.card_breakfast);
+        lunchCard = (CardView) view.findViewById(R.id.card_lunch);
+        dinnerCard = (CardView) view.findViewById(R.id.card_dinner);
+        logCards.add(breakfastCard);
+        logCards.add(lunchCard);
+        logCards.add(dinnerCard);
+
+
         for(ImageButton buttons : cameraButtons){
 
             buttons.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +85,18 @@ public class LogFragment extends Fragment {
             });
         }
 
+        for(CardView cards : logCards){
+
+            cards.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
+        }
+
+
 
 
 
@@ -84,6 +110,11 @@ public class LogFragment extends Fragment {
 
     public void openCamera(){
         Intent intent = new Intent(this.getContext(), CameraActivity.class);
+        startActivity(intent);
+    }
+
+    public void openConsumptionList(){
+        Intent intent = new Intent(this.getContext(), ConsumptionList.class);
         startActivity(intent);
     }
 }
