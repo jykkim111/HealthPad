@@ -16,23 +16,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 import com.example.diet.BaseActivity;
 import com.example.diet.R;
 import com.example.diet.ui.Social.SocialFragment;
-import com.example.diet.ui.analyze.CameraActivity;
 import com.example.diet.ui.analyze.LogFragment;
-import com.example.diet.ui.chat.ChatFragment;
-import com.example.diet.ui.home.CaloriesFragment;
+import com.example.diet.ui.exercise.ChatFragment;
 import com.example.diet.ui.home.HomeFragment;
-import com.example.diet.ui.home.NutritionFragment;
-import com.example.diet.ui.home.ui.main.SectionsPagerAdapter;
 import com.example.diet.ui.profile.ProfilePage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.tabs.TabItem;
-import com.google.android.material.tabs.TabLayout;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -91,10 +83,10 @@ public class MainActivity extends BaseActivity implements DatePickerDialog.OnDat
                         selectedFragment = LogFragment.newInstance();
                         break;
                     case R.id.menu_main_To_dos:
-                        selectedFragment = SocialFragment.newInstance();
+                        selectedFragment = ChatFragment.newInstance();
                         break;
                     case R.id.menu_main_chat:
-                        selectedFragment = ChatFragment.newInstance();
+                        selectedFragment = SocialFragment.newInstance();
                         break;
                 }
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

@@ -3,23 +3,14 @@ package com.example.diet.ui.Social;
 import android.os.Bundle;
 
 import com.example.diet.R;
-import com.example.diet.ui.chat.ChatFragment;
-import com.example.diet.ui.home.CaloriesFragment;
-import com.example.diet.ui.home.NutritionFragment;
 import com.example.diet.ui.home.ui.main.SectionsPagerAdapter;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 

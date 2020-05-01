@@ -21,6 +21,27 @@
     <string name="lunch_calorie_total">320</string>
     <string name="dinner_calorie_available">230</string>
     <string name="dinner_calorie_total">320</string>
+    <string name="food_calorie">105</string>
+    <string name="total_fat">14.3g</string>
+    <string name="sat_fat">4.7g</string>
+    <string name="cholest">558mg</string>
+    <string name="sodium">213mg</string>
+    <string name="carb">1.1g</string>
+    <string name="protein">18.8g</string>
+    <string name="fiber">0g</string>
+    <string name="sugars">0.6g</string>
+
+
+    <string-array name= "measurements">
+        <item>Each</item>
+        <item>Grams</item>
+        <item>Pounds</item>
+        <item>Ounces</item>
+        <item>ML</item>
+        <item>L</item>
+
+    </string-array>
+
 
 
     <string-array name= "foods">

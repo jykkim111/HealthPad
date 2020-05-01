@@ -1,7 +1,10 @@
 package com.example.diet.ui.analyze;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,11 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.diet.BaseActivity;
 import com.example.diet.R;
 
-public class LogActivity extends BaseActivity {
+import java.util.ArrayList;
+
+public class LogActivity extends BaseActivity{
 
     RecyclerView recyclerView;
-    String s1[], s2[];
-    int images[] = {R.drawable.egg, R.drawable.bacon, R.drawable.milk_icon, R.drawable.hamburger_icon};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,18 +24,29 @@ public class LogActivity extends BaseActivity {
         setContentView(R.layout.fragment_additems);
         final Context context = this;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Add Items");
+
+        final ArrayList<Item> list = new ArrayList<>();
+        list.add(new Item(R.drawable.egg, "egg", "105 calories"));
+        list.add(new Item(R.drawable.bacon, "bacon", "105 calories"));
+        list.add(new Item(R.drawable.milk_icon, "milk", "105 calories"));
+        list.add(new Item(R.drawable.hamburger_icon, "hamburger", "105 calories"));
 
         recyclerView = findViewById(R.id.recycler_view);
 
-        s1 = getResources().getStringArray(R.array.foods);
-        s2 = getResources().getStringArray(R.array.description);
 
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(this, s1, s2, images);
+
+        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(list);
         recyclerView.setAdapter(recyclerAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
+        recyclerAdapter.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(context, ItemDetails.class).putExtra("food", list.get(position).getFoodName());
+                startActivity(intent);
+            }
+        });
     }
-
 
 }

@@ -50,6 +50,8 @@
             android:parentActivityName=".ui.MainActivity" />
         <activity android:name=".ui.analyze.LogActivity"
             android:parentActivityName=".ui.MainActivity"/>
+        <activity android:name=".ui.analyze.ItemDetails"
+            android:parentActivityName=".ui.analyze.LogActivity"/>
     </application>
 
 </manifest>

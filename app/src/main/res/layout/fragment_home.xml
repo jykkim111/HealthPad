@@ -20,15 +20,6 @@
             app:tabIndicator="@color/black"
             app:tabTextColor="@color/black">
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tab_text_1" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tab_text_2"/>
 
         </com.google.android.material.tabs.TabLayout>
 

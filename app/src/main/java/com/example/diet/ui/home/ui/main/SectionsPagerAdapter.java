@@ -52,4 +52,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         fragmentList.add(fragment);
         titleList.add(title);
     }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return titleList.get(position);
+    }
 }
